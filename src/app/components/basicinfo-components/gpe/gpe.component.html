@@ -1,0 +1,192 @@
+
+<div class="container" style="float: right;padding: 0;width:60%;border:gray solid 1px;margin-right: 4%;margin-top:3%">
+  <div style="text-align: center;margin:0;width:100%;background-color: steelblue;color: white">
+    <p style="padding: 8px">Add Checkup Details of Patients </p>
+  </div>
+    <!-- <div id="divtop">
+        <a href="" id="a1" class="ainactive" >BASIC INFO</a>
+        <a routerLink="" class="ainactive" >GENERAL PHYSICAL EXAMINATION</a>
+        <a routerLink="" class="ainactive" >SYSTEMATICALS CLINICAL EXAMINATION</a>
+        <a routerLink="" class="ainactive">INVESTIGATION</a>
+        <a routerLink="" class="ainactive">FINAL SUBMIT</a>
+    </div> -->
+
+    <form style="padding: 5px" >
+
+        <div id="box" class="form-row">
+            <span>BASIC INFO</span>
+            <span  style="background-color: rgb(255,0,0,0.2);margin:0;border-radius: 5px">GENERAL PHYSICAL EXAMINATION</span>
+            <span>SYSTEMATICAL CLINICAL EXAMINATION</span>
+            <span>INVESTIGATION</span>
+            <span>FINAL SUBMIT</span>
+          </div>
+      
+        <div class="form-row" >
+          <div class="col-lg-3 col-md-3 col-sm-3" >
+            <label for="validationDefault01" class="label1">Age</label>
+            <input type="text"  class="form-control"  id="validationDefault01" placeholder="Age" required>
+          </div>
+          
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <label for="inputState" class="label" class="label1">Sex</label>
+                <select id="inputState" class="form-control">
+                  <option selected>--select--</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                  <option>Other</option> 
+                </select>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-3" >
+                  <label for="validationDefault02" class="label1">Height(in cm)</label>
+                  <input type="text" class="form-control"  id="validationDefault02" placeholder="Height"  required>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-3" >
+                    <label for="validationDefault02" class="label1">Weight(in kg)</label>
+                    <input type="text" class="form-control"  id="validationDefault02" placeholder="Weight"  required>
+              </div>
+        </div>
+        <div class="form-row">
+            <div class="col-lg-3 col-md-3 col-sm-3" >
+                <label for="validationDefault02" class="label1">BMI</label>
+                <input type="text" class="form-control"  id="validationDefault02" placeholder="BMI"  required>
+            </div>
+            <form action="" style="display: inline-block;width: 25%">
+              <div class="form-row">
+                  <div class="col-lg-5 col-md-5 col-sm-5" >
+                      <label for="validationDefault02" class="label1">BP(mm/hg)</label>
+                      <input type="text" class="form-control"  id="validationDefault02" placeholder="High"  required>
+                  </div>
+                  <div class="col-lg-5 col-md-5 col-sm-5" style="margin-top:5%" >
+                      <label for="validationDefault02" ></label>
+                      <input type="text" class="form-control"  id="validationDefault02" placeholder="low"  required>
+                  </div>
+              </div>
+            </form>
+            <div class="col-lg-3 col-md-3 col-sm-3" >
+                <label for="validationDefault02" class="label1">Pulse(per/min)</label>
+                <input type="text" class="form-control"  id="validationDefault02" placeholder="Pulse"  required>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3" >
+                <label for="validationDefault02" class="label1">Respiratory</label>
+                <input type="text" class="form-control"  id="validationDefault02" placeholder="Respiratory"  required>
+            </div>
+        </div>
+    
+        <div class="form-row">
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <label for="inputState" class="label">H/o Smoking</label>
+                <select id="inputState" class="form-control">
+                  <option selected>NAD</option>
+                  <option>YES</option>
+                  <option>NO</option>
+                  <option>Other</option> 
+                </select>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <label for="inputState" class="label">Tobacco</label>
+                <select id="inputState" class="form-control">
+                  <option selected>NAD</option>
+                  <option>YES</option>
+                  <option>NO</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-3">
+                  <label for="inputState" class="label">Alcohal</label>
+                  <select id="inputState" class="form-control">
+                    <option selected>NAD</option>
+                    <option>YES</option>
+                  <option>NO</option>
+                  <option>Other</option>
+                  </select>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <label for="inputState" class="label">Hypertension</label>
+                    <select id="inputState" class="form-control">
+                      <option selected>NAD</option>
+                      <option>YES</option>
+                      <option>NO</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+          </div>
+          <div class="form-row">
+              <div class="col-lg-3 col-md-3 col-sm-3">
+                  <label for="inputState" class="label">Diabetes</label>
+                  <select id="inputState" class="form-control">
+                    <option selected>NAD</option>
+                    <option>YES</option>
+                    <option>NO</option>
+                    <option>Other</option>
+                  </select>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-3">
+                  <label for="inputState" class="label">Any Other Habits</label>
+                  <select id="inputState" class="form-control">
+                    <option selected>NAD</option>
+                    <option>YES</option>
+                    <option>NO</option>
+                    <option>Other</option> 
+                  </select>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <label for="inputState" class="label">Pallor</label>
+                    <select id="inputState" class="form-control">
+                      <option selected>NAD</option>
+                      <option>YES</option>
+                      <option>NO</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-3">
+                      <label for="inputState" class="label">Jaundice</label>
+                      <select id="inputState" class="form-control">
+                        <option selected>NAD</option>
+                        <option>YES</option>
+                        <option>NO</option>
+                        <option>Other</option>
+                      </select>
+                    </div>
+              </div>
+          <div class="form-row">
+              <div class="col-lg-3 col-md-3 col-sm-3">
+                  <label for="inputState" class="label">clubbing</label>
+                  <select id="inputState" class="form-control">
+                    <option selected>NAD</option>
+                    <option>YES</option>
+                    <option>NO</option>
+                    <option>Other</option>
+                  </select>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-3">
+                  <label for="inputState" class="label">Cyonisis</label>
+                  <select id="inputState" class="form-control">
+                    <option selected>NAD</option>
+                    <option>YES</option>
+                  <option>NO</option>
+                  <option>Other</option>
+                  </select>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <label for="inputState" class="label">Palpable Nodes</label>
+                    <select id="inputState" class="form-control">
+                      <option selected>NAD</option>
+                      <option>YES</option>
+                      <option>NO</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-3">
+                      <label for="inputState" class="label">Anything other Findings</label>
+                      <select id="inputState" class="form-control">
+                        <option selected>NAD</option>
+                        <option>YES</option>
+                        <option>NO</option>
+                        <option>Other</option> 
+                      </select>
+                    </div>
+          </div>
+         
+        <button class="btn btn-primary" type="submit" style="margin-left: 40%;margin-right:20% ;margin-top: 2%;margin-bottom: 2%" (click)="onclicksubmit()">Save And Next</button>
+      </form>
+</div>

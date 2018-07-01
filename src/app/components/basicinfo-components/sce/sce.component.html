@@ -1,0 +1,89 @@
+
+
+<div class="container" style="float: right;padding: 0;width:60%;border:gray solid 1px;margin-right: 4%;margin-top:3%">
+  <div style="text-align: center;margin:0;width:100%;background-color: steelblue;color: white">
+    <p style="padding: 8px">Add Checkup Details of Patients </p>
+  </div>
+    <!-- <div id="divtop">
+        <a href="" id="a1" class="ainactive" >BASIC INFO</a>
+        <a routerLink="" class="ainactive" >GENERAL PHYSICAL EXAMINATION</a>
+        <a routerLink="" class="ainactive" >SYSTEMATICALS CLINICAL EXAMINATION</a>
+        <a routerLink="" class="ainactive">INVESTIGATION</a>
+        <a routerLink="" class="ainactive">FINAL SUBMIT</a>
+    </div> -->
+    
+    <form style="padding: 5px" >
+        <div id="box" class="form-row">
+            <span>BASIC INFO</span>
+            <span>GENERAL PHYSICAL EXAMINATION</span>
+            <span   style="background-color: rgb(255,0,0,0.2);margin:0;border-radius: 5px">SYSTEMATICAL CLINICAL EXAMINATION</span>
+            <span>INVESTIGATION</span>
+            <span>FINAL SUBMIT</span>
+          </div>
+
+      <div style="margin-top:2%;margin-bottom:2% "><strong>General checkups to be done and not necessarily to be examined by a specialist unless otherwise indicated </strong></div>
+        
+          <div class="form-row">
+              <div class="col-lg-3 col-md-3 col-sm-3">
+                  <label for="inputState" class="label">Respiratory</label>
+                  <select id="inputState" class="form-control">
+                    <option selected>Within Normal Limits</option>
+                    <option>Not Within Limits</option>
+                  </select>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-3">
+                  <label for="inputState" class="label">CVS</label>
+                  <select id="inputState" class="form-control">
+                      <option selected>Within Normal Limits</option>
+                      <option>Not Within Limits</option>
+                  </select>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <label for="inputState" class="label">Abdomen</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Within Normal Limits</option>
+                        <option>Not Within Limits</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-3">
+                      <label for="inputState" class="label">CNS</label>
+                      <select id="inputState" class="form-control">
+                          <option selected>Within Normal Limits</option>
+                          <option>Not Within Limits</option>
+                      </select>
+                    </div>
+              </div>
+          <div class="form-row">
+              <div class="col-lg-3 col-md-3 col-sm-3">
+                  <label for="inputState" class="label">Loco Motor</label>
+                  <select id="inputState" class="form-control">
+                    <option selected>Within Normal Limits</option>
+                    <option>Not Within Limits</option>
+                  </select>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-3">
+                  <label for="inputState" class="label">Dental</label>
+                  <select id="inputState" class="form-control">
+                      <option selected>Within Normal Limits</option>
+                      <option>Not Within Limits</option>
+                  </select>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <label for="inputState" class="label">ENT</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Within Normal Limits</option>
+                        <option>Not Within Limits</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-3">
+                      <label for="inputState" class="label">Eye</label>
+                      <select id="inputState" class="form-control">
+                          <option selected>Within Normal Limits</option>
+                          <option>Not Within Limits</option>
+                      </select>
+                    </div>
+          </div>
+         
+        <button class="btn btn-primary" type="submit" style="margin-left: 40%;margin-right:20% ;margin-top: 2%;margin-bottom: 2%" (click)="onclicksubmit()">Save And Next</button>
+      </form>
+</div>
