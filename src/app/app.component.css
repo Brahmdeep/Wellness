@@ -9,7 +9,7 @@
     
 }
 
-ul {
+.ul {
     margin: 2%;
   padding: 10px;
   list-style-type: none;
@@ -17,7 +17,7 @@ ul {
   border: gray solid 1px;
     margin-bottom: 10%
 }
-li{
+.li{
    padding-top:1%;
    padding-bottom: 1%;
    

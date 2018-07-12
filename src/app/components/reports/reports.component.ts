@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Route, Router } from '../../../../node_modules/@angular/router';
 
 @Component({
   selector: 'app-reports',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReportsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
+    if(localStorage.getItem('status')=='false'){
+      alert('login first !');
+      this.router.navigate(['/']);
+    }
   }
 
 }

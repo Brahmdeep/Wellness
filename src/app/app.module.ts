@@ -12,6 +12,12 @@ import { FinalComponent } from './components/basicinfo-components/final/final.co
 import { GpeComponent } from './components/basicinfo-components/gpe/gpe.component';
 import { IvestComponent } from './components/basicinfo-components/ivest/ivest.component';
 import { SceComponent } from './components/basicinfo-components/sce/sce.component';
+import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http'
+import { HttpModule } from '@angular/http';
+import{FlashMessagesModule, FlashMessagesService} from 'angular2-flash-messages';
+import { LandingComponent } from './components/authorization/landing/landing.component';
+import {CookieService} from 'angular2-cookie'
 
 @NgModule({
   declarations: [
@@ -25,11 +31,17 @@ import { SceComponent } from './components/basicinfo-components/sce/sce.componen
     FinalComponent,
     GpeComponent,
     IvestComponent,
-    SceComponent
+    SceComponent,
+    LandingComponent
   ],
   imports: [
+    FlashMessagesModule,
+    HttpClientModule,
+    HttpModule,
+    FormsModule,
     BrowserModule,
     RouterModule.forRoot([
+      {path:'',component:LandingComponent},
       {path:'hospitalreg',component:HospitalRegComponent},
       {path:'medicalstaffreg',component:MedicalStafRegComponent},
       {path:'opdreg',component:OpdregComponent},
@@ -42,7 +54,7 @@ import { SceComponent } from './components/basicinfo-components/sce/sce.componen
       {path:'basic/sce',component:SceComponent}
     ])
   ],
-  providers: [],
+  providers: [FlashMessagesService,CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -6,61 +6,64 @@
         <div class="form-row" >
           <div class="col-md-4 mb-3" >
             <label for="validationDefault01">First name</label>
-            <input type="text"  class="form-control" id="validationDefault01" placeholder="First name"  required>
+            <input type="text"  class="form-control" id="validationDefault01" placeholder="First name"  required [(ngModel)]="firstname" name="firstname">
           </div>
           <div class="col-md-4 mb-3" >
               <label for="validationDefault02">Middle Name</label>
-              <input type="text" class="form-control" id="validationDefault02" placeholder="Middle name"  required>
+              <input type="text" class="form-control" id="validationDefault02" placeholder="Middle name"  required [(ngModel)]="middlename" name="middlename">
             </div>
           <div class="col-md-4 mb-3" >
             <label for="validationDefault02">Last Name</label>
-            <input type="text" class="form-control" id="validationDefault02" placeholder="Last name"  required>
+            <input type="text" class="form-control" id="validationDefault02" placeholder="Last name"  required [(ngModel)]="lastname" name="lastname">
           </div>
         </div>
         <div class="form-row">
           <div class="col-md-4 mb-3">
             <label for="validationDefault03">Health Care Center</label>
-            <input type="text" class="form-control" readonly id="validationDefault03" value="Railway Hospital" required>
+            <input type="text" class="form-control" readonly id="validationDefault03" value="Railway Hospital" required [(ngModel)]="healthcenter" name="healthcenter">
           </div>
           <div class="col-md-4 mb-3">
             <label for="validationDefault04">Designation</label>
-            <input type="text" class="form-control "  id="validationDefault04" placeholder="Designation" required>
+            <input type="text" class="form-control "  id="validationDefault04" placeholder="Designation" required [(ngModel)]="designation" name="designation">
           </div>
           <div class="col-md-4 mb-3">
               <label for="validationDefault04">Department</label>
-              <input type="text" class="form-control "  id="validationDefault04" placeholder="Department" required>
+              <input type="text" class="form-control "  id="validationDefault04" placeholder="Department" required [(ngModel)]="department" name="department">
             </div>
         </div>
     
         <div class="form-row">
-            <div class="col-md-4 mb-3" style="width:0">
+            <div class="col-md-3 mb-3" style="width:0">
               <label for="validationDefault03">Station</label>
-              <input type="text" class="form-control" id="validationDefault03" placeholder="Station" required>
+              <input type="text" class="form-control" id="validationDefault03" placeholder="Station" required [(ngModel)]="station" name="station">
             </div>
-            <div class="col-md-4 mb-3">
+            <div class="col-md-3 mb-3">
               <label for="validationDefault04">Email Id</label>
-              <input type="text" class="form-control "  id="validationDefault04" placeholder="Email id" required>
+              <input type="text" class="form-control "  id="validationDefault04" placeholder="Email id" required [(ngModel)]="emailid" name="emailid"> 
             </div>
-            <div class="col-md-4 mb-3">
+            <div class="col-md-3 mb-3">
+              <label for="validationDefault04">Password</label>
+              <input type="text" class="form-control "  id="validationDefault05" placeholder="Password" required [(ngModel)]="password" name="password">
+            </div>
+            <div class="col-md-3 mb-3">
                 <label for="validationDefault04">Mobile No.</label>
-                <input type="text" class="form-control "  id="validationDefault04" placeholder="Mobile No" required>
+                <input type="text" class="form-control "  id="validationDefault04" placeholder="Mobile No" required [(ngModel)]="mobileno" name="mobileno">
               </div>
           </div>
           <div class="form-row">
               <div class="col-lg-4 col-md-3 mb-3">
                 <label for="validationDefault04">Railway No.</label>
-                <input type="text" class="form-control "  id="validationDefault04" placeholder="State" required>
+                <input type="number" class="form-control "  id="validationDefault04" placeholder="State" required [(ngModel)]="railwayno" name="railwayno">
               </div>
               <div class="col-lg-4 col-md-4">
                   <label for="inputState">Select Role</label>
-                  <select id="inputState" class="form-control">
+                  <select id="inputState" class="form-control" [(ngModel)]="role" name="role">
                     <option selected>Choose...</option>
-                    <option>Employee</option>
-                    <option>Guard</option>
-                    <option>Clerk</option>
+                    <option>Doctor</option>
+                    <option>Nurse</option>
                   </select>
                 </div>
             </div>
-        <button class="btn btn-primary" type="submit" style="margin-left: 40%;margin-right:20% ">Submit form</button>
+        <button class="btn btn-primary" type="submit" style="margin-left: 40%;margin-right:20% " (click)="onClickSubmit()">Submit form</button>
       </form>
 </div>

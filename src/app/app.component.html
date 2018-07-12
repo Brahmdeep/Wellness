@@ -1,23 +1,45 @@
 <!--The content below is only a placeholder and can be replaced.-->
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#" style="color: white">{{email}}</a>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <button class="btn btn-danger" (click)="onclickLogout()" value="logout">Logout</button>   
+    </form>
+  </div>
+</nav>
+
 
 <div id="divtop">
   <div style="width: 100%;color: white;background-color: steelblue;display: block"><h4><i class="fas fa-arrow-alt-circle-left"></i>Services</h4></div>
-  <ul >
-      <li><a routerLink="/signin">Sign-In</a></li>
-      <hr>
-    <li><a routerLink="/medicalstaffreg">Medical Staff Registration</a></li>
+  <ul class="ul">
+    <li class="li"><a routerLink="/medicalstaffreg">Medical Staff Registration</a></li>
     <hr>
-    <li><a routerLink="/basic/basicinfo">Checkup Details</a></li>
+    <li class="li"><a routerLink="/basic/basicinfo">Checkup Details</a></li>
     <hr>
-    <li><a routerLink="/reports">Report</a></li>
+    <li class="li"><a routerLink="/reports">Report</a></li>
     <hr>
-    <li><a routerLink="/password">Change Password</a></li>
+    <li class="li"><a routerLink="/password">Change Password</a></li>
     <hr>
-    <li><a routerLink="/hospitalreg">Register Hospital</a></li>
+    <li class="li"><a routerLink="/hospitalreg">Register Hospital</a></li>
     <hr>
-    <li><a routerLink="/opdreg">OPD Registration</a></li>
+    <li class="li"><a routerLink="/opdreg">OPD Registration</a></li>
   </ul>
 </div>
 
-
+<flash-messages></flash-messages>
 <router-outlet></router-outlet>
