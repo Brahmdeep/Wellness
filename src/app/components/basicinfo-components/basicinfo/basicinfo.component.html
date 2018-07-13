@@ -9,13 +9,7 @@
         <a routerLink="" class="ainactive">INVESTIGATION</a>
         <a routerLink="" class="ainactive">FINAL SUBMIT</a>
     </div> -->
-    <p>Today is {{today | date}}</p>
-    <p>Or if you prefer, {{today | date:'fullDate'}}</p>
-    <p>The time is {{today | date:'jmZ'}}</p>
-    <p>Finally the date and time is {{today | date:'short'}}</p>
-    <p #value>The date is {{today | date:'dd-MM-yyyy'}}</p>
-
-    
+   
     <form style="padding: 5px" >
         <div id="box" class="form-row">
             <span style="background-color: rgb(255,0,0,0.2);margin:0;border-radius: 5px">BASIC INFO</span>
@@ -35,12 +29,9 @@
             </div>
             <div class="col-lg-4 col-md-4">
                 <label for="inputState" class="label">Examined By</label>
-                <select id="inputState" class="form-control">
+                <select id="inputState" class="form-control" [(ngModel)]="examinedby" name="examinedby">
                   <option selected>--select--</option>
-                  <option>Dr.ABC</option>
-                  <option>Dr.BCD</option>
-                  <option>Dr.CDE</option>
-                  <option>Dr.ADB</option>
+                  <option *ngFor="let doctor of doctors">{{doctor.firstname}} {{doctor.middlename}} {{doctor.lastname}}</option>
                 </select>
               </div>
         </div>
@@ -55,50 +46,50 @@
           </div>
           <div class="col-md-4 mb-3">
               <label for="validationDefault04">Controlling Authority of Employee</label>
-              <input type="text" class="form-control "  id="validationDefault04" placeholder="Controlling Authority of Employee" required>
+              <input type="text" class="form-control "  id="validationDefault04" placeholder="Controlling Authority of Employee" required [(ngModel)]="controllingauthority" name="controllingauthority">
             </div>
         </div>
     
         <div class="form-row">
             <div class="col-md-4 mb-3" style="width:0">
               <label for="validationDefault03">Medical I Card</label>
-              <input type="text" class="form-control" id="validationDefault03" placeholder="Medical I Card" required>
+              <input type="text" class="form-control" id="validationDefault03" placeholder="Medical I Card" required [(ngModel)]="medicalicard" name="medicalicard">
             </div>
             <div class="col-md-4 mb-3">
               <label for="validationDefault04">Medical I Pass</label>
-              <input type="text" class="form-control "  id="validationDefault04" placeholder="Medical I Pass" required>
+              <input type="text" class="form-control "  id="validationDefault04" placeholder="Medical I Pass" required [(ngModel)]="medicalpass" name="medicalpass">
             </div>
             <div class="col-md-4 mb-3">
                 <label for="validationDefault04">Registration Number</label>
-                <input type="text" class="form-control "  id="validationDefault04" placeholder="Registration No" required>
+                <input type="text" class="form-control "  id="validationDefault04" placeholder="Registration No" required [(ngModel)]="registrationno" name="registrationno">
               </div>
           </div>
           <div class="form-row">
               <div class="col-md-4 mb-3" >
                   <label for="validationDefault01">First name</label>
-                  <input type="text"  class="form-control" id="validationDefault01" placeholder="First name"  required>
+                  <input type="text"  class="form-control" id="validationDefault01" placeholder="First name"  required [(ngModel)]="firstname" name="firstname">
                 </div>
                 <div class="col-md-4 mb-3" >
                     <label for="validationDefault02">Middle Name</label>
-                    <input type="text" class="form-control" id="validationDefault02" placeholder="Middle name"  required>
+                    <input type="text" class="form-control" id="validationDefault02" placeholder="Middle name"  required [(ngModel)]="middlename" name="middlename">
                   </div>
                 <div class="col-md-4 mb-3" >
                   <label for="validationDefault02" class="label">Last Name</label>
-                  <input type="text" class="form-control" id="validationDefault02" placeholder="Last name"  required>
+                  <input type="text" class="form-control" id="validationDefault02" placeholder="Last name"  required [(ngModel)]="lastname" name="lastname">
                 </div>
           </div>
           <div class="form-row">
               <div class="col-md-4 mb-3" >
                   <label for="validationDefault01" class="label">Designation</label>
-                  <input type="text"  class="form-control" id="validationDefault01" placeholder="Designation"  required>
+                  <input type="text"  class="form-control" id="validationDefault01" placeholder="Designation"  required [(ngModel)]="designation" name="designation">
                 </div>
                 <div class="col-md-4 mb-3" >
                     <label for="validationDefault02" class="label">Department</label>
-                    <input type="text" class="form-control" id="validationDefault02" placeholder="Department"  required>
+                    <input type="text" class="form-control" id="validationDefault02" placeholder="Department"  required [(ngModel)]="department" name="department">
                   </div>
                 <div class="col-md-4 mb-3" >
                   <label for="validationDefault02" class="label">Employee Serving Station</label>
-                  <input type="text" class="form-control" id="validationDefault02" placeholder="Employee Serving Station"  required>
+                  <input type="text" class="form-control" id="validationDefault02" placeholder="Employee Serving Station"  required [(ngModel)]="servingstation" name="servingstation">
                 </div>
           </div>
           <div class="form-row" >
@@ -111,7 +102,7 @@
               <div class="col-lg-6 col-md-6" >
                   <div class="label" class="label">Examined Date</div>
                   <div class="col-10">
-                      <input class="form-control" type="date"  id="example-date-input">
+                      <input class="form-control" type="date"  id="example-date-input" [(ngModel)]="examinationdate" name="examinationdate">
                     </div>
                 </div>
             </div>

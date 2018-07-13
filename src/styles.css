@@ -1,9 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
-/* You can add global styles to this file, and also import other style files */
-#footer {
-    clear: both;
-    position: relative;
-    z-index: 10;
-    height: 3em;
-    margin-top: -3em;
-}
+    /* You can add global styles to this file, and also import other style files */
+    /* You can add global styles to this file, and also import other style files */
+    #footer {
+        clear: both;
+        position: relative;
+        z-index: 10;
+        height: 3em;
+        margin-top: -3em;
+    }

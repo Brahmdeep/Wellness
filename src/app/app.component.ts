@@ -24,6 +24,8 @@ export class AppComponent {
     }
     localStorage.setItem('status','false');
     localStorage.setItem('emailid','');
+    localStorage.setItem('role','');
+
     window.location.href="http://localhost:4200";
   }
   

@@ -8,17 +8,17 @@
           <div class="col-lg-6 col-md-6">
             <div class="label">From Date</div>
             <div class="col-10">
-                <input class="form-control" type="date"  id="example-date-input">
+                <input class="form-control" type="date"  id="example-date-input" [(ngModel)]="fromdate" name="fromdate">
               </div>
           </div>
           <div class="col-lg-6 col-md-6" >
               <div class="label">To Date</div>
               <div class="col-10">
-                  <input class="form-control" type="date"  id="example-date-input">
+                  <input class="form-control" type="date"  id="example-date-input" [(ngModel)]="todate" name="todate">
                 </div>
             </div>
         </div>
-        <button class="btn btn-primary" type="submit" style="margin:2%;margin-left:40% ">Generate Report</button>
+        <button class="btn btn-primary" type="submit" style="margin:2%;margin-left:40% " (click)="onsubmit()" >Generate Report</button>
 
         <table class="table">
             <thead class="bg-warning">
@@ -33,14 +33,14 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-               
-              </tr>
-              <tr>
-                
-              </tr>
-              <tr>
-               
+              <tr *ngFor="let employee of availbleemployee">
+                  <td>1</td>
+                  <td>{{employee.firstname}}</td>
+                  <td>{{employee.medicalcard}}</td>
+                  <td>{{employee.registrationno}}</td>
+                  <td>{{employee.station}}</td>
+                  <td>{{employee.controllingauthority}}</td>
+                  <td>{{employee.examinedat}}</td>
               </tr>
             </tbody>
           </table>

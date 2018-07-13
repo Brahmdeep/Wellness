@@ -66,5 +66,16 @@ export class SendDataService {
       })
     })
   }
+  modifyData(url,data){
+    return new Promise(resolve=>{
+      this.http.put(url,data).subscribe(data=>{
+        resolve(data);
+      },err=>{
+        var error=JSON.parse(err._body);
+        console.log(error.error.message);
+        this.flash.show(error.error.message,{cssClass:'alert-danger',timeout:3000});
+      })
+    })
+  }
   
 }
