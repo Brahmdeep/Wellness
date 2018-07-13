@@ -40,7 +40,13 @@ export class HospitalRegComponent implements OnInit {
      if(localStorage.getItem('status')=='false'){
         alert('login first !');
         this.router.navigate(['/']);
-     }
+     }else if(localStorage.getItem('status')=='true' && localStorage.getItem('role')=='Doctor'){
+      alert('You have insufficient rights to access this content');
+      this.router.navigate(['/']);
+    }else if(localStorage.getItem('status')=='true' && localStorage.getItem('role')=='Nurse'){
+      alert('You have insufficient rights to access this content');
+      this.router.navigate(['/']);
+    }
     this.uniqueid="H"+Date.now();
     console.log(this.uniqueid);
     this.zoneService.getAllZones().then(zones=>{

@@ -14,7 +14,10 @@ export class GpeComponent implements OnInit {
     if(localStorage.getItem('status')=='false'){
       alert('login first !');
       this.router.navigate(['/']);
-   }
+   }else if(localStorage.getItem('status')=='true' && localStorage.getItem('role')=='Nurse'){
+    alert('You have insufficient rights to access this content');
+    this.router.navigate(['/']);
+    }
   }
   onclicksubmit(){
     this.router.navigate(['/basic/sce']);

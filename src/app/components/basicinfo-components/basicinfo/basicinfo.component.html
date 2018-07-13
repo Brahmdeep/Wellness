@@ -9,16 +9,20 @@
         <a routerLink="" class="ainactive">INVESTIGATION</a>
         <a routerLink="" class="ainactive">FINAL SUBMIT</a>
     </div> -->
+    <p>Today is {{today | date}}</p>
+    <p>Or if you prefer, {{today | date:'fullDate'}}</p>
+    <p>The time is {{today | date:'jmZ'}}</p>
+    <p>Finally the date and time is {{today | date:'short'}}</p>
+    <p #value>The date is {{today | date:'dd-MM-yyyy'}}</p>
 
     
-
     <form style="padding: 5px" >
         <div id="box" class="form-row">
             <span style="background-color: rgb(255,0,0,0.2);margin:0;border-radius: 5px">BASIC INFO</span>
             <span>GENERAL PHYSICAL EXAMINATION</span>
             <span>SYSTEMATICAL CLINICAL EXAMINATION</span>
-            <span>INVESTIGATION</span>
-            <span>FINAL SUBMIT</span>
+            <!-- <span>INVESTIGATION</span>
+            <span>FINAL SUBMIT</span> -->
           </div>
         <div class="form-row" >
           <div class="col-md-4 mb-3" >
@@ -101,7 +105,7 @@
               <div class="col-lg-6 col-md-6">
                 <div class="label">Date of Birth</div>
                 <div class="col-10">
-                    <input class="form-control" type="date"  id="example-date-input">
+                    <input class="form-control" type="date"  id="example-date-input" [(ngModel)]="DOB" name="DOB">
                   </div>
               </div>
               <div class="col-lg-6 col-md-6" >

@@ -37,7 +37,7 @@ export class LandingComponent implements OnInit {
       this.flashMessage.show('Please fill email in proper email format',{cssClass:'alert-danger',timeout:3000});
       return false;
       }
-      var url="http://localhost:3000/api/Employees?filter=%7B%22where%22%3A%7B%22emaiid%22%3A%22"+this.emaillog+"%22%7D%7D";
+      var url="http://localhost:3000/api/Medicalstaffs?filter=%7B%22where%22%3A%7B%22email%22%3A%20%22"+this.emaillog+"%22%7D%7D";
       this.getData.getemployee(url).then(data=>{
         this.employee=data;
         if(this.employee[0]==undefined){
@@ -46,8 +46,9 @@ export class LandingComponent implements OnInit {
           if(this.employee[0].password==this.passlog){
              this.flashMessage.show('successfully logged in',{cssClass:'alert-success',timeout:3000});    
              this.cookieService.removeAll();
-             localStorage.setItem('emailid',this.employee[0].emaiid);
+             localStorage.setItem('emailid',this.emaillog);
              localStorage.setItem('status','true');
+             localStorage.setItem('role',data[0].role);
              console.log(localStorage.getItem('status'))
               window.location.href="http://localhost:4200/hospitalreg";
           }else if(this.employee[0].password!=this.passlog){

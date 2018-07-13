@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Http,Headers} from '@angular/http';
 import { map } from 'rxjs/operators';
+import { FlashMessagesService } from '../../../../node_modules/angular2-flash-messages';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,8 @@ export class SendDataService {
   authToken:any;
   staff:any;
 
-  constructor(private http:Http) { }
+  constructor(private http:Http,
+  private flash:FlashMessagesService) { }
 
   registerStaff(staff){
     console.log(staff);
@@ -49,6 +51,18 @@ export class SendDataService {
         resolve(data);
       },err=>{
         console.log(err);
+      })
+    })
+  }
+
+  sendData(url,data){
+    return new Promise(resolve=>{
+      this.http.post(url,data).subscribe(data=>{
+        resolve(data);
+      },err=>{
+        var error=JSON.parse(err._body);
+        console.log(error.error.message);
+        this.flash.show(error.error.message,{cssClass:'alert-danger',timeout:3000})
       })
     })
   }
