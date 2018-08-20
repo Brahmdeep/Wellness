@@ -58,7 +58,7 @@ export class PasswordChangeComponent implements OnInit {
       localStorage.setItem('status','false');
       localStorage.setItem('emailid','');
       localStorage.setItem('role','');
-      this.router.navigate(['/']);
+      window.location.href="http://localhost:4200/";
     },err=>{
       console.log(err);
     })

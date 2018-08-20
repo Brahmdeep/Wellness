@@ -3,7 +3,7 @@
   <div style="text-align: center;margin:0;width:100%;background-color: steelblue;color: white">
     <p style="padding: 8px">Reports</p>
   </div>
-    <form style="" >
+    <form  >
         <div class="form-row" >
           <div class="col-lg-6 col-md-6">
             <div class="label">From Date</div>
@@ -23,7 +23,6 @@
         <table class="table">
             <thead class="bg-warning">
               <tr>
-                <th scope="col">S.No</th>
                 <th scope="col">Name</th>
                 <th scope="col">Medical Card Number</th>
                 <th scope="col">Registration Number</th>
@@ -32,9 +31,8 @@
                 <th scope="col">Hospital Name</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody> 
               <tr *ngFor="let employee of availbleemployee">
-                  <td>1</td>
                   <td>{{employee.firstname}}</td>
                   <td>{{employee.medicalcard}}</td>
                   <td>{{employee.registrationno}}</td>

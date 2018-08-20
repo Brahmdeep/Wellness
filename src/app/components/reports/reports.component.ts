@@ -14,6 +14,7 @@ export class ReportsComponent implements OnInit {
   ////////////////////
   availbleemployee:any=[];
   employees:any=[];
+  ctr:any;
   constructor(private router:Router,
   private getData:GetdataService) { }
 
@@ -53,11 +54,13 @@ export class ReportsComponent implements OnInit {
   
     this.getData.getAllData(url).then(data=>{
       this.employees=data;
+     this.ctr=0;
       for(var i=0;i<this.employees.length;i++){
         var date=this.employees[i].datenow;
         var intdate=parseInt(date);
         console.log(new Date(intdate));
         if(fdate<new Date(intdate) && new Date(intdate)<tdate){
+          this.ctr++;
           this.availbleemployee.push(this.employees[i]);
         }
       }
@@ -65,14 +68,7 @@ export class ReportsComponent implements OnInit {
     },err=>{
       console.log(err);
     })
-    // for(var i=0;i<this.employees.length;i++){
-    //   console.log(this.employees[i].datenow);
-    //   console.log(fdate+"   "+new Date(this.employees[i].datenow) +"    "+tdate);
-    //   console.log(fdate<new Date(1531474064801) && tdate>new Date(1531474064801));
-    //   if(fdate<=new Date(this.employees[i].datenow) && tdate>=new Date(this.employees[i].datenow) ){
-    //     this.availbleemployee.push(this.employees[i]);
-    //   }
-    // }
+   
   }
 
 }

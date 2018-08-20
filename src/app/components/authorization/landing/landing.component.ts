@@ -50,7 +50,7 @@ export class LandingComponent implements OnInit {
              localStorage.setItem('status','true');
              localStorage.setItem('role',data[0].role);
              console.log(localStorage.getItem('status'))
-              window.location.href="http://localhost:4200/hospitalreg";
+              window.location.href="http://localhost:4200/reports";
           }else if(this.employee[0].password!=this.passlog){
               this.flashMessage.show('Email and password dont match',{cssClass:'alert-danger',timeout:3000});
           }

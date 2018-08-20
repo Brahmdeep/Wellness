@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import{Router} from '@angular/router'
 import { GetdataService } from '../../../services/FetchingServices/getdata.service';
 import { SendDataService } from '../../../services/PostingServices/send-data.service';
+import { ValidationServiceService } from '../../../services/validation-Services/validation-service.service';
 
 @Component({
   selector: 'app-basicinfo',
@@ -34,7 +35,8 @@ export class BasicinfoComponent implements OnInit {
 
   constructor(private router:Router,
   private getData:GetdataService,
-  private sendData:SendDataService) { }
+  private sendData:SendDataService,
+  private validate:ValidationServiceService) { }
 
   ngOnInit() {
     if(localStorage.getItem('status')=='false'){
@@ -73,7 +75,7 @@ export class BasicinfoComponent implements OnInit {
         "station": "NJP",
         "zone": "NORTH FRONTIER RAILWAY"
     }
-  
+    this.validate.eidInstance(employee.eid);
     this.sendData.sendData(url,employee).then(data=>{
       console.log(data);
     },err=>{
